@@ -26,7 +26,9 @@ API URL : colleges-in.herokuapp.com
 ### Searching a College
 
 **POST:** */colleges/search*
-**Headers : ** 
+
+**Headers:** 
+
 Keyword - Keyword to search
 
 #### Example

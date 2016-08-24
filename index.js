@@ -8,27 +8,22 @@ var colleges;
 
 fs.readFile('db/database.csv', (err, data) => {
   
-  console.log("[cAPi] : File read !");
 
+console.log("[cAPi] : File read !");
 
-  csv.parse(data, function(err, data){
-colleges = data;
+	csv.parse(data, function(err, data){
 
-    csv.transform(data, function(data){
-      return data.map(function(value){return value.toUpperCase()});
-    }, function(err, data){
-      csv.stringify(data, function(err, data){
-        	console.log("[cAPi] : CSV Parsed & Loaded !");
+	colleges = data;
 
-      });
-    });
+	console.log("[cAPi] : CSV Loaded !");
+    
   });
 
 });
    
 
 
-app.get('/colleges/total', function (req, res) {
+app.post('/colleges/total', function (req, res) {
 
 	var str = {
 		total : colleges.length
@@ -52,6 +47,67 @@ app.post('/colleges/search', function (req, res) {
 	}
 
 	res.send(JSON.stringify(result));
+
+})
+
+app.post('/colleges/state', function (req, res) {
+
+	var state = req.headers.state.toLowerCase();
+	var offset = req.headers.offset;
+	console.log(offset);
+	var result = [];	
+	
+
+	for(var i = 0 ; i < colleges.length; i++){
+
+		if(colleges[i][4].toLowerCase().indexOf(state)>=0){				
+				result.push(colleges[i]);				
+		}
+	}
+
+	var limitResult = [];
+	var count = 0;
+
+	var limit = Number(offset) + 10;
+
+	for(i = offset ; i < limit ; i++){
+
+		limitResult.push(result[i]);
+
+	}
+
+	res.send(JSON.stringify(limitResult));
+
+})
+
+
+app.post('/colleges/district', function (req, res) {
+
+	var district = req.headers.district.toLowerCase();
+	var offset = req.headers.offset;
+	console.log(offset);
+	var result = [];	
+	
+
+	for(var i = 0 ; i < colleges.length; i++){
+
+		if(colleges[i][5].toLowerCase().indexOf(district)>=0){				
+				result.push(colleges[i]);				
+		}
+	}
+
+	var limitResult = [];
+	var count = 0;
+
+	var limit = Number(offset) + 10;
+
+	for(i = offset ; i < limit ; i++){
+
+		limitResult.push(result[i]);
+		
+	}
+
+	res.send(JSON.stringify(limitResult));
 
 })
 

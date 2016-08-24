@@ -5,7 +5,7 @@ Here we have used the data from https://data.gov.in/catalog/list-colleges-aishe-
 
 ## Requirements
 
-* Noje.JS
+* Node.JS
 
 ## Installation
 

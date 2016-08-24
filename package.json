@@ -1,0 +1,25 @@
+{
+  "name": "colleges-api",
+  "version": "1.0.0",
+  "description": "API to get all the colleges in India",
+  "main": "index.js",
+  "dependencies": {
+    "csv": "^1.1.0",
+    "express": "^4.14.0",
+    "nodecsv": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SriGuruCoimbatore/colleges-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SriGuruCoimbatore/colleges-api/issues"
+  },
+  "homepage": "https://github.com/SriGuruCoimbatore/colleges-api#readme"
+}

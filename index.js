@@ -41,8 +41,15 @@ app.post('/colleges/search', function (req, res) {
 
 	for(var i = 0 ; i < colleges.length ; i++){
 
-		if(colleges[i][2].toLowerCase().indexOf(keyword)>=0){				
-				result.push(colleges[i]);
+		if(colleges[i][2].toLowerCase().indexOf(keyword)>=0){	
+
+			colleges[i][2] = colleges[i][2].replace(/\:[^>]*\)/ig,"");
+			colleges[i][2] = colleges[i][2].replace(/(\(Id)/ig,"");
+
+			colleges[i][1] = colleges[i][1].replace(/\:[^>]*\)/ig,"");
+			colleges[i][1] = colleges[i][1].replace(/(\(Id)/ig,"");
+
+			result.push(colleges[i]);
 		}
 	}
 
@@ -60,8 +67,15 @@ app.post('/colleges/state', function (req, res) {
 
 	for(var i = 0 ; i < colleges.length; i++){
 
-		if(colleges[i][4].toLowerCase().indexOf(state)>=0){				
-				result.push(colleges[i]);				
+		if(colleges[i][4].toLowerCase().indexOf(state)>=0){		
+
+			colleges[i][2] = colleges[i][2].replace(/\:[^>]*\)/ig,"");
+			colleges[i][2] = colleges[i][2].replace(/(\(Id)/ig,"");
+
+			colleges[i][1] = colleges[i][1].replace(/\:[^>]*\)/ig,"");
+			colleges[i][1] = colleges[i][1].replace(/(\(Id)/ig,"");		
+
+			result.push(colleges[i]);				
 		}
 	}
 
@@ -91,8 +105,15 @@ app.post('/colleges/district', function (req, res) {
 
 	for(var i = 0 ; i < colleges.length; i++){
 
-		if(colleges[i][5].toLowerCase().indexOf(district)>=0){				
-				result.push(colleges[i]);				
+		if(colleges[i][5].toLowerCase().indexOf(district)>=0){	
+
+			colleges[i][2] = colleges[i][2].replace(/\:[^>]*\)/ig,"");
+			colleges[i][2] = colleges[i][2].replace(/(\(Id)/ig,"");
+
+			colleges[i][1] = colleges[i][1].replace(/\:[^>]*\)/ig,"");
+			colleges[i][1] = colleges[i][1].replace(/(\(Id)/ig,"");
+						
+			result.push(colleges[i]);				
 		}
 	}
 

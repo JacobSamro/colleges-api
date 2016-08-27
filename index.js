@@ -132,6 +132,36 @@ app.post('/colleges/district', function (req, res) {
 
 })
 
+Array.prototype.contains = function(obj) {
+    var i = this.length;
+    while (i--) {
+        if (this[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+}
+
+app.post('/states', function (req, res) {
+
+	var result = [];		
+
+	for(var i = 1 ; i < colleges.length; i++){
+
+		if(result.indexOf(colleges[i][4]) < 0 ){
+
+				result.push(colleges[i][4]);
+
+		}else{
+			
+		}
+		
+	}	
+
+	res.send(JSON.stringify(result));
+
+})
+
 
 var server = app.listen(8081, function () {
 

@@ -127,15 +127,25 @@ app.post('/colleges/district', function (req, res) {
 	var limitResult = [];
 	var count = 0;
 
-	var limit = Number(offset) + 10;
+	if(offset == -1){
 
-	for(i = offset ; i < limit ; i++){
+		res.send(JSON.stringify(result));
 
-		limitResult.push(result[i]);
-		
+	}else{
+		var limit = Number(offset) + 10;
+
+		for(i = offset ; i < limit ; i++){
+
+			limitResult.push(result[i]);
+			
+		}
+
+		res.send(JSON.stringify(limitResult));
 	}
 
-	res.send(JSON.stringify(limitResult));
+	
+
+	
 
 })
 

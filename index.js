@@ -142,7 +142,7 @@ Array.prototype.contains = function(obj) {
     return false;
 }
 
-app.post('/states', function (req, res) {
+app.post('/allstates', function (req, res) {
 
 	var result = [];		
 
@@ -162,6 +162,30 @@ app.post('/states', function (req, res) {
 
 })
 
+
+app.post('/districts', function (req, res) {
+
+	var state = req.headers.state.toLowerCase();
+	var result = [];
+
+	for(var i = 0 ; i < colleges.length ; i++){
+
+		if(colleges[i][4].toLowerCase().indexOf(state)>=0){		
+
+			if(result.indexOf(colleges[i][5])< 0){
+
+				result.push(colleges[i][5]);
+
+			}		
+
+			
+
+		}
+	}
+
+	res.send(JSON.stringify(result));
+
+})
 
 var server = app.listen(8081, function () {
 

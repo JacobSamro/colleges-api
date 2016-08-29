@@ -21,7 +21,11 @@ console.log("[cAPi] : File read !");
 
 });
    
+app.get('/',function(req,res){
 
+	res.send("Colleges API : SriGuru Institute of Technology, Coimbatore");
+
+});
 
 app.post('/colleges/total', function (req, res) {
 

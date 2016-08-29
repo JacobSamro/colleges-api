@@ -3,6 +3,9 @@ var csv = require('csv');
 var app = express();
 const fs = require("fs");
 
+const PORT = process.env.PORT || 3000;
+
+
 var colleges; 
 
 
@@ -191,11 +194,8 @@ app.post('/districts', function (req, res) {
 
 })
 
-var server = app.listen(80, function () {
+app.listen(PORT, function () {  
 
-  var host = server.address().host
-  var port = server.address().port
-
-  console.log("Example app listening at http://%s:%s", host, port)
+  console.log("Example app listening at " + PORT);
 
 })

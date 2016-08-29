@@ -286,7 +286,6 @@ Offset: 0
 ```
 POST /allstates HTTP/1.1
 HOST: localhost:8081
-State: Tamil Nadu
 ```
 
 **RESPONSE :**

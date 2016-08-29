@@ -187,9 +187,9 @@ app.post('/districts', function (req, res) {
 
 })
 
-var server = app.listen(8081, function () {
+var server = app.listen(80, function () {
 
-  var host = "127.0.0.1"
+  var host = server.address().host
   var port = server.address().port
 
   console.log("Example app listening at http://%s:%s", host, port)

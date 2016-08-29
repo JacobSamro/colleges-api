@@ -171,7 +171,7 @@ content-length: 0
 
  ---------------------------------------
 
-### Getting colleges in a State
+### Getting colleges in a District
 
 **POST:** */colleges/district*
 
@@ -276,6 +276,8 @@ Offset: 0
 ]
 ```
 
+---------------------------------------
+
 ###Listing all State
 
 #### Example
@@ -329,6 +331,9 @@ State: Tamil Nadu
    "Andaman & Nicobar Islands"
 ]
 ```
+
+---------------------------------------
+
 ###Listing districs in a State
 
 #### Example

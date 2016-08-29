@@ -385,7 +385,7 @@ State: Tamil Nadu
 ```
 
 ##Contributers
-* [Arun ( Lead. Coordinator )](https://github.com/DhinakaranSDK)
+* [Arun ( Lead. Coordinator )](https://github.com/ArunKumarSS)
 * [Jacob Samro](https://github.com/JacobSamro)
 * [Dhinakaran](https://github.com/DhinakaranSDK)
 

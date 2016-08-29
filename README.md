@@ -187,7 +187,7 @@ POST /colleges/district HTTP/1.1
 HOST: localhost:8081
 District: coimbatore
 Offset: 0
- ```
+```
 
 **RESPONSE :**
 
@@ -273,7 +273,8 @@ Offset: 0
       "Tamil Nadu",
       "Coimbatore"
    ]
-]```
+]
+```
 
 ###Listing all State
 
@@ -284,9 +285,10 @@ Offset: 0
 POST /allstates HTTP/1.1
 HOST: localhost:8081
 State: Tamil Nadu
- ```
+```
 
 **RESPONSE :**
+
 ```json
 [  
    "Andhra Pradesh",
@@ -332,6 +334,7 @@ State: Tamil Nadu
 #### Example
 
 **REQUEST :**
+
 ```
 POST /district HTTP/1.1
 HOST: localhost:8081
@@ -339,6 +342,7 @@ State: Tamil Nadu
  ```
 
 **RESPONSE :**
+
 ```json
 [  
    "Sivaganga",

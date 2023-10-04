@@ -9,11 +9,11 @@ Here we have used the data from https://data.gov.in/catalog/list-colleges-aishe-
 
 ## Installation
 
-Download the project and use the command ``node index`` to run the app. Or you can use our live heroku app colleges-india.herokuapp.com
+Download the project and use the command ``node index`` to run the app. Or you can use our live heroku app colleges-api-india.fly.dev
 
 ## Usage
 
-API URL : ``colleges-in.herokuapp.com``
+API URL : ``colleges-api-india.fly.dev``
 
 ### Listing total number of colleges
 
